@@ -35,7 +35,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-### Technologie a utiliser et leur utiliter
+## Technologie a utiliser et leur utiliter
 
 - Tailwind-css et shadcn : permet de designer rapidement un projet sans ce casser la tete
 
@@ -43,7 +43,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 - react-hoock-forme et yup : pour la validation de formulaire
 
-### package(dependence)
+## package(dependence)
 
 - firebase
 - yup

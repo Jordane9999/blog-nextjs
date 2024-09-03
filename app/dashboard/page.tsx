@@ -15,11 +15,12 @@ import { useFirebase } from "@/context/articleContext";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 export default function Dashboard() {
+  // permet de recuperrer l'utilisateur
   const { user } = useAuth();
 
   const { articles, deleteArticle } = useFirebase();
 
-  console.log(user);
+  // console.log(user);
 
   return (
     <>

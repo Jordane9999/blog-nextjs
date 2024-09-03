@@ -19,10 +19,12 @@ export default function useAuth() {
 
   const router = useRouter();
 
+  // Ceci est la route par defaut
   const redirectToDashboard = () => {
     router.push("/dashboard");
   };
 
+  // La connection de l'utilisateur avec google
   const loginWithGoogle = async () => {
     try {
       const result = await signInWithPopup(auth, providerGoogle);
@@ -33,6 +35,7 @@ export default function useAuth() {
     }
   };
 
+  // La connection de l'utilisateur avec github
   const loginWithGithub = async () => {
     try {
       const result = await signInWithPopup(auth, providerGithub);
@@ -43,6 +46,7 @@ export default function useAuth() {
     }
   };
 
+  // La gestion du changement d'etat de l'utilisateur
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -55,6 +59,7 @@ export default function useAuth() {
     return () => unsubscribe();
   }, []);
 
+  // Une fonction pour rediriger l'utilisateur si il est dejas connecter
   const redirectIfAuthenticated = () => {
     if (user) {
       redirectToDashboard();

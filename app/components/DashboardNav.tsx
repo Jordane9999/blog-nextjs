@@ -7,6 +7,7 @@ import { auth } from "@/db/configFirebase";
 export default function DashboardNav() {
   const router = useRouter();
 
+  // Cette fonction me permet de fait une deconnection
   const handleSignOut = () => {
     signOut(auth);
     router.push("/");
